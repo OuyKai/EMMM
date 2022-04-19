@@ -79,9 +79,9 @@ for epoch in range(args.epochs):
         w_1 = avg_cost[epoch - 1, 0] / avg_cost[epoch - 2, 0]
         w_2 = avg_cost[epoch - 1, 1] / avg_cost[epoch - 2, 1]
         w_3 = avg_cost[epoch - 1, 2] / avg_cost[epoch - 2, 2]
-        lambda_weight[0, epoch] = 2 * np.exp(w_1 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
-        lambda_weight[1, epoch] = 2 * np.exp(w_2 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
-        lambda_weight[2, epoch] = 2 * np.exp(w_3 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
+        lambda_weight[0, epoch] = 3 * np.exp(w_1 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
+        lambda_weight[1, epoch] = 3 * np.exp(w_2 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
+        lambda_weight[2, epoch] = 3 * np.exp(w_3 / T) / (np.exp(w_1 / T) + np.exp(w_2 / T) + np.exp(w_3 / T))
 
     model.train()
     for step, (x_train, pos_train, y_train) in enumerate(train_dataload):
