@@ -1,5 +1,5 @@
 # MMM
-Implementations of model **MMM**  described in our paper.
+Implementations of model **EMMM**  described in our paper.
 
 ## Environment Requirement
 
@@ -26,7 +26,7 @@ Our python version and requirements as follows:
 
 3. Train the model using the Python script `run.py` .
 
-   You can run the following command to train the model **MMM** on the Tmall dataset:
+   You can run the following command to train the model **EMMM** on the Tmall dataset:
 
    ```bash
    python run.py --dataset-name Tmall
