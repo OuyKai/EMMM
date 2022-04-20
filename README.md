@@ -1,4 +1,4 @@
-# MMM
+# EMMM
 Implementations of model **EMMM**  described in our paper.
 
 ## Environment Requirement
